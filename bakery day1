@@ -1,0 +1,12 @@
+def calculate_price(num_loaves):
+    regular_price = 185 * num_loaves
+    discount = regular_price * 0.6
+    total_price = regular_price - discount
+    return regular_price, discount, total_price
+
+num_loaves = int(input("Enter the number of loaves of day old bread being purchased: "))
+regular_price, discount, total_price = calculate_price(num_loaves)
+
+print("Regular price: {:.2f}".format(regular_price))
+print("Discount: {:.2f}".format(discount))
+print("Total price: {:.2f}".format(total_price))
