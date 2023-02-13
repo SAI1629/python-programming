@@ -1,0 +1,8 @@
+def is_happy(n):
+    seen = set()
+    while n not in seen:
+        seen.add(n)
+        n = sum(int(digit) ** 2 for digit in str(n))
+    return n == 1
+The algorithm uses a seen set to keep track of numbers that have been encountered during the process. The algorithm starts by adding the initial number n to the set. It then calculates the sum of squares of its digits by converting n to a string and using a list comprehension to square each digit and sum the results. The resulting number is then assigned back to n and the process is repeated. If n is ever encountered again, it means the algorithm is in a cycle and the number is not happy, so the function returns False. If the process eventually reaches the number 1, it means the number is happy, and the function returns True.
+
